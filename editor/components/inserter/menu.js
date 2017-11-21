@@ -272,8 +272,7 @@ export class InserterMenu extends Component {
 								const visibleBlocks = this.getVisibleBlocksByCategory( blocksForTab );
 
 								return (
-									<div ref={ ( ref ) => this.tabContainer = ref }
-										className="editor-inserter__content">
+									<div ref={ ( ref ) => this.tabContainer = ref }>
 										{ this.renderTabView( tabKey, visibleBlocks ) }
 									</div>
 								);
@@ -282,7 +281,7 @@ export class InserterMenu extends Component {
 					</TabPanel>
 				}
 				{ isSearching &&
-					<div role="menu" className="editor-inserter__content">
+					<div role="menu" className="editor-inserter__search-results">
 						{ this.renderCategories( this.getVisibleBlocksByCategory( getBlockTypes() ) ) }
 					</div>
 				}
